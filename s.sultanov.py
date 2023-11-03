@@ -2,4 +2,7 @@
 
 from transformers import pipeline
 model = pipeline(model="seara/rubert-tiny2-ru-go-emotions")
-model("Привет, ты мне нравишься!")
+
+res = model(input('Введите cвой текст: '))
+print(res)
+
