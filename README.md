@@ -42,7 +42,6 @@
 * [Streamlit](https://streamlit.io)
 
 #### Примеры
-[Приложение после запуска](pz2/resources/d.pakhomov/1.png)
-[Генерация аудио](pz2/resources/d.pakhomov/2.png)
-[Готовое аудио](pz2/resources/d.pakhomov/3.png)
-[Пример](pz2/resources/d.pakhomov/sample.mp4)
+![Приложение после запуска](pz2/resources/d.pakhomov/1.png)
+![Генерация аудио](pz2/resources/d.pakhomov/2.png)
+![Готовое аудио](pz2/resources/d.pakhomov/3.png)
