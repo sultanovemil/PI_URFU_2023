@@ -45,5 +45,6 @@
 ![Приложение после запуска](pz2/resources/d.pakhomov/1.png)
 ![Генерация аудио](pz2/resources/d.pakhomov/2.png)
 ![Готовое аудио](pz2/resources/d.pakhomov/3.png)
+
 https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/d2b44601-238d-4c5b-a176-ba77dde3b440
 
