@@ -44,12 +44,12 @@
 * [Streamlit](https://streamlit.io)
 
 #### Примеры
+##### Скриншоты
 ![Приложение после запуска](https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/632656d9-2093-44b4-93e6-8bfb23232041)
 ![Генерация аудио](https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/4e558c07-db17-4d47-9dcf-3812be38d872)
 ![Готовое аудио](https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/146ae83f-9e78-4569-b25c-81a8a70a043a)
-
-
-
+##### Аудио
+https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/d2b44601-238d-4c5b-a176-ba77dde3b440
 
 ### `a.shibakova_2.py`
 Веб-приложение моделирует переписку и предлагает различные темы для общения. 
