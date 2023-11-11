@@ -57,5 +57,7 @@
 
 #### Используемые библиотеки
 streamlit
+
 streamlit_chat
-from transformers
+
+transformers
