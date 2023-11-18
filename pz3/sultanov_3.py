@@ -14,6 +14,7 @@ async def root():
 
 @app.post("/translate/")
 def translate(item: Item):
+    """Перевод текста с мультиязычного (mul) на английский язык (en)"""
     return pipe(item.text)[0]
 
 
