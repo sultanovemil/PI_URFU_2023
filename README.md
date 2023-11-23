@@ -35,7 +35,7 @@
 ## Практическое задание №2 (pz2)
 Создание Streamlit приложений на основе первого практического задания.
 
-### `d.pakhomov.py`
+### `d.pakhomov_2.py`
 Данное веб-приложение конвертирует текст с семантическими аннотациями в аудио человеческой речи с помощью модели [`suno/bark-small`](https://huggingface.co/suno/bark-small).
 
 #### Используемые библиотеки
@@ -88,3 +88,31 @@ transformers
 
 ### `sultanov_3.py`
 API для перевода текста с мультиязычного (mul) на английский язык (en) с помощью модели [`Helsinki-NLP/opus-mt-mul-en`](https://huggingface.co/Helsinki-NLP/opus-mt-mul-en). 
+
+### `pakhomov_3`
+API для определения эмоций в англоязычном тексте с помощью модели [`SamLowe/roberta-base-go_emotions`](https://huggingface.co/SamLowe/roberta-base-go_emotions).
+
+#### Установка
+1. Склонируйте репозиторий на локальную машину:
+```bash
+git clone https://github.com/sultanovemil/PI_URFU_2023.git
+```
+
+2. Перейдите в директорию с приложением, создайте виртуальную среду и активируйте её:
+```bash
+cd pz3/pakhomov_3
+python -m venv .venv
+.venv/scripts/activate
+```
+
+3. Установите требования указанные в `pz3/pakhomov_3/requirements.txt`:
+```bash
+pip install -r requirements.txt
+```
+
+4. Запустите приложение с помощью команды:
+```bash
+uvicorn main:app --host localhost
+```
+
+5. Документация Swagger будет доступна по ссылке: http://localhost:8000/docs
