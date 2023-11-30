@@ -122,4 +122,3 @@ uvicorn main:app --host localhost
 ### `sultanov_4.py`
 Веб-приложение, которое предсказывает тип цветка Ириса на основе его характеристик. Приложение использует библиотеку машинного обучения scikit-learn для обучения модели классификации и предсказания типа цветка.
 Приложение доступно по ссылке: https://piurfu2023project4.streamlit.app 
-![Скриншот](https://github.com/sultanovemil/PI_URFU_2023/blob/main/pz4/sultanov/screenshot.png)
