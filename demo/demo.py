@@ -23,7 +23,7 @@ st.sidebar.write('Вы ввели... ', vidID )
 # Запрос к YouTube API для получения комментариев к видео
 api_service_name = "youtube"
 api_version = "v3"
-DEVELOPER_KEY = "AIzaSyD3CSZOqmB3YSXsvBFQG5wJ-Inoc0TeGnA"
+DEVELOPER_KEY = ""
 youtube = googleapiclient.discovery.build(
     api_service_name, api_version, developerKey=DEVELOPER_KEY)
 request = youtube.commentThreads().list(
