@@ -22,6 +22,7 @@ API_key = st.sidebar.text_input('YouTube API KEY')
 vidID = st.sidebar.text_input('Video Id')
 st.sidebar.write('Вы ввели... ', vidID )
 
+<<<<<<< HEAD
 btn_start = st.sidebar.button('Загрузить')
 if btn_start:
     # Запрос к YouTube API для получения комментариев к видео
@@ -37,6 +38,21 @@ if btn_start:
     )
     response = request.execute()
     comments = []
+=======
+# Запрос к YouTube API для получения комментариев к видео
+api_service_name = "youtube"
+api_version = "v3"
+DEVELOPER_KEY = ""
+youtube = googleapiclient.discovery.build(
+    api_service_name, api_version, developerKey=DEVELOPER_KEY)
+request = youtube.commentThreads().list(
+    part="snippet",
+    videoId="KJA9A1q9l7E",
+    maxResults=100
+)
+response = request.execute()
+comments = []
+>>>>>>> d9679a209182f11cf4882c86239465f49ecec016
 
     # Преобразуем полученные комментарии в DataFrame
     for item in response['items']:
