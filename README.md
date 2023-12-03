@@ -9,7 +9,10 @@
 ## Программная инженерия. Итоговый проект (PJ)
 Цель проекта: разработать Web приложение машинного обучения и развернуть его в облаке. 
 В проекте используется предварительно обученная модель [`blanchefort/rubert-base-cased-sentiment`](https://huggingface.co/blanchefort/rubert-base-cased-sentiment).
-** Итоговый проект (PJ)** доступен по ссылке: https://huggingface.co/spaces/Emil25/pi_project
+
+### Итоговый проект (PJ) доступен по ссылке: https://huggingface.co/spaces/Emil25/pi_project
+
+
 
 ## Практическое задание №1 (pz1)
 Создание базовых приложений, использующие готовые библиотеки машинного обучения.
