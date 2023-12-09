@@ -64,11 +64,9 @@ https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/d2b44601-238d-4c5b-
 
 
 #### Используемые библиотеки
-streamlit
-
-streamlit_chat
-
-transformers
+* [Streamlit](https://streamlit.io)
+* [streamlit_chat](https://streamlit.io)
+* [Transformers (HuggingFace)](https://huggingface.co)
 
 ### `e.sultanov_2.py`
 Веб-приложение анализирует и распознает изображения с помощью модели [`apple/mobilevit-small`](https://huggingface.co/apple/mobilevit-small).
@@ -124,6 +122,11 @@ uvicorn main:app --host localhost
 ```
 
 5. Документация Swagger будет доступна по ссылке: http://localhost:8000/docs
+
+
+### `shibakova`
+API для чатбота с помощью модели [`facebook/blenderbot-400M-distill`](https://huggingface.co/facebook/blenderbot-400M-distill?text=Hey+my+name+is+Clara%21+How+are+you%3F). 
+
 
 ## Практическое задание №4 (pz4)
 Развертывание Web или API приложения в облаке для доступа пользователей через интернет.
