@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_chat import message as st_message
+from streamlit-chat import message as st_message
 from transformers import pipeline, Conversation
 
 if "history" not in st.session_state:
