@@ -1,3 +1,6 @@
+import os
+import re
+
 import torch
 import streamlit as st
 import googleapiclient.discovery
@@ -5,8 +8,7 @@ import pandas as pd
 from transformers import pipeline
 import matplotlib.pyplot as plt
 import seaborn as sns
-import os
-import re
+
 
 st.title('Анализатор комментариев :red[YouTube] :sunglasses:')
 
@@ -63,21 +65,29 @@ if btn_start:
         ])
     comments_df = pd.DataFrame(comments, columns=['author', 'published_at', 'updated_at', 'like_count', 'text'])
 
-    
-     
-    # Выводим таблицу с комментариями на странице    
+    # Получаем таблицу с комментариями на странице    
     st.header('Комментарии из YouTube')
-    selected_columns = ['author', 'published_at', 'text']
-    new_df = comments_df[selected_columns]        
-    st.write(new_df)
+    selected_columns = ['text', 'author', 'published_at']
+    comments_df = comments_df[selected_columns]
+
+    res_list = []
+    # Анализируем тональность комментария с помощью модели Hugging Face
+    with st.spinner('Идет процесс обработки данных...'):
+        res_list = cls_sent(comments_df['text'].to_list())
+    s_label = f'Готово! Обработано {len(res_list)} комментариев.'
+    st.success(s_label)
+
+    # Выводим таблицу с результатами на странице
+    full_df = pd.concat([pd.DataFrame(res_list), comments_df], axis=1)
+    st.write(full_df)
     st.markdown('***')
-    
+
     # Выводим heatmap комментариев по часам и датам     
     st.header('Комментарии по часам и датам')
-    new_df['published_at'] = pd.to_datetime(new_df['published_at'])
-    new_df['Date'] = new_df['published_at'].dt.date
-    new_df['Hour'] = new_df['published_at'].dt.hour
-    pivot_table = new_df.pivot_table(index='Hour', columns='Date', values='text', aggfunc='count')
+    full_df['published_at'] = pd.to_datetime(full_df['published_at'])
+    full_df['Date'] = full_df['published_at'].dt.date
+    full_df['Hour'] = full_df['published_at'].dt.hour
+    pivot_table = full_df.pivot_table(index='Hour', columns='Date', values='text', aggfunc='count')
     plt.figure(figsize=(10, 6))
     sns.heatmap(pivot_table, cmap='YlGnBu')
     plt.title('Количество комментариев по часам и датам')
@@ -86,32 +96,11 @@ if btn_start:
     st.pyplot(plt)
     st.markdown('***')
 
-    # Проходим по каждому комментарию в датафрейме
-    # Анализируем тональность комментария с помощью модели Hugging Face
-    # Добавляем результат в список
-    res_list = []
-    with st.spinner('Идет процесс обработки данных ...'):
-        for comment in comments_df['text']:
-            result = cls_sent(comment)
-            res_list.append(result[0])
-    s_label = f'Готово! Загружено {len(res_list)} комментариев'
-    st.success(s_label)
-
-    
-    # Выводим таблицу с результатами на странице    
-    res_df = pd.DataFrame(res_list)     
-    st.header("Таблица c результатами работы модели")
-    st.write(res_df)
-    st.markdown('***')
-        
     # Создаем круговую диаграмму
-    data = res_df['label'].value_counts()
+    st.header('Эмоциональная окраска комментариев на YouTube')
+    data = full_df['label'].value_counts()
     fig, ax = plt.subplots()
     plt.title("Эмоциональная окраска комментариев на YouTube")
-    label = res_df['label'].unique()
+    label = full_df['label'].unique()
     ax.pie(data, labels=label, autopct='%1.1f%%')
     st.pyplot(fig)
-
-
-
-    
