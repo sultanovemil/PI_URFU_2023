@@ -22,7 +22,9 @@ st.markdown('***')
 st.sidebar.markdown('# Меню')
 
 # Получаем YouTube API KEY из secrets
-API_key = os.getenv("API_KEY_YOUTUBE") 
+API_key = os.environ["API_KEY_YOUTUBE"]
+if not API_key:
+    raise RuntimeError('Key is not set. Check your environment variables.')
 st.sidebar.markdown('***')
 
 # Получаем id видеоролика из URL для отправки запроса
