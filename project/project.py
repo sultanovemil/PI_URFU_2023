@@ -12,19 +12,17 @@ import seaborn as sns
 
 st.title('Анализатор комментариев :red[YouTube] :sunglasses:')
 
+# Получаем YouTube API KEY из secrets
+DEVELOPER_KEY = st.secrets['API_KEY_YOUTUBE']
+if not DEVELOPER_KEY:
+    raise RuntimeError('Key is not set. Check your environment variables.')
 
 # Инициализируем модель Hugging Face для анализа тональности текста
 cls_sent = pipeline("sentiment-analysis",   
                       "blanchefort/rubert-base-cased-sentiment")
 
 st.markdown('***')
-
 st.sidebar.markdown('# Меню')
-
-# Получаем YouTube API KEY из secrets
-API_key = st.secrets['API_KEY_YOUTUBE']
-if not API_key:
-    raise RuntimeError('Key is not set. Check your environment variables.')
 st.sidebar.markdown('***')
 
 # Получаем id видеоролика из URL для отправки запроса
@@ -45,7 +43,6 @@ if btn_start:
     # Запрос к YouTube API для получения комментариев к видео
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = API_key
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey=DEVELOPER_KEY)
     request = youtube.commentThreads().list(
