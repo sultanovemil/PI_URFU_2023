@@ -22,7 +22,7 @@ st.markdown('***')
 st.sidebar.markdown('# Меню')
 
 # Получаем YouTube API KEY из secrets
-API_key = os.getenv("API_KEY_YOUTUBE") 
+API_key = st.secrets["API_KEY_YOUTUBE"]
 st.sidebar.markdown('***')
 
 # Получаем id видеоролика из URL для отправки запроса
