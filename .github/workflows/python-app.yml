@@ -3,6 +3,9 @@
 
 name: Project Tests
 
+env:
+  API_KEY_YOUTUBE: ${{secrets.API_KEY_YOUTUBE}}
+
 on:
   push:
     branches: [ "main" ]
