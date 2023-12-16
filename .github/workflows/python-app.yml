@@ -3,8 +3,6 @@
 
 name: Project Tests
 
-env:
-  API_KEY_YOUTUBE: ${{secrets.API_KEY_YOUTUBE}}
 
 on:
   push:
@@ -41,5 +39,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       working-directory: ./project
+      env:
+        API_KEY_YOUTUBE: ${{ secrets.API_KEY_YOUTUBE }}
       run: |
         pytest
