@@ -7,6 +7,9 @@
 * Султанов Э.М.
 
 ## Программная инженерия. Итоговый проект (PJ)
+
+[![Tests](https://github.com/sultanovemil/PI_URFU_2023/actions/workflows/python-app.yml/badge.svg)](https://github.com/sultanovemil/PI_URFU_2023/actions/workflows/python-app.yml)
+
 Цель проекта: разработать Web приложение машинного обучения и развернуть его в облаке. 
 В проекте используется предварительно обученная модель [`blanchefort/rubert-base-cased-sentiment`](https://huggingface.co/blanchefort/rubert-base-cased-sentiment).
 
