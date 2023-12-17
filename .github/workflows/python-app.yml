@@ -15,9 +15,10 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./project
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -25,20 +26,24 @@ jobs:
       with:
         python-version: "3.10"
     - name: Install dependencies
-      working-directory: ./project
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
-      working-directory: ./project
       run: |
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Create and populate streamlit secrets
+      env:
+        API_KEY_YOUTUBE: ${{ secrets.API_KEY_YOUTUBE }}
+      run: |
+        mkdir .streamlit
+        touch .streamlit/secrets.toml
+        echo "API_KEY_YOUTUBE = "$API_KEY_YOUTUBE"" >> .streamlit/secrets.toml
     - name: Test with pytest
-      working-directory: ./project
       env:
         API_KEY_YOUTUBE: ${{ secrets.API_KEY_YOUTUBE }}
       run: |
