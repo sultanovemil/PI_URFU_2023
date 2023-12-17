@@ -5,6 +5,9 @@ from streamlit.testing.v1 import AppTest
 DEVELOPER_KEY = os.getenv('API_KEY_YOUTUBE')
 
 
+def test_key_in_env():
+    assert DEVELOPER_KEY is not None
+
 def test_bad_url_input():
     at = AppTest.from_file('project.py', default_timeout=30)
     at.secrets['API_KEY_YOUTUBE'] = DEVELOPER_KEY
