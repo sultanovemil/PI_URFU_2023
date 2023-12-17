@@ -10,8 +10,8 @@
 
 [![Tests](https://github.com/sultanovemil/PI_URFU_2023/actions/workflows/python-app.yml/badge.svg)](https://github.com/sultanovemil/PI_URFU_2023/actions/workflows/python-app.yml)
 
-Цель проекта: разработать Web приложение машинного обучения и развернуть его в облаке. 
-В проекте используется предварительно обученная модель [`blanchefort/rubert-base-cased-sentiment`](https://huggingface.co/blanchefort/rubert-base-cased-sentiment).
+**Цель проекта:** разработать Web приложение машинного обучения и развернуть его в облаке. 
+В проекте используется модель [`blanchefort/rubert-base-cased-sentiment`](https://huggingface.co/blanchefort/rubert-base-cased-sentiment).
 
 ### Итоговый проект (PJ) доступен по ссылке: 
 https://huggingface.co/spaces/Emil25/pi_project
