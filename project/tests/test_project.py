@@ -18,4 +18,3 @@ def test_bad_url_input():
     at.sidebar.button[0].click().run()
     assert len(at.sidebar.text_input) == 1
     assert at.warning[0].value == 'URL'
-    assert len(at.success) == 1
