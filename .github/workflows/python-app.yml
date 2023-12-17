@@ -39,7 +39,7 @@ jobs:
     - name: Create and populate streamlit secrets
       env:
         API_KEY_YOUTUBE: ${{ secrets.API_KEY_YOUTUBE }}
-      working-directory: ~/
+      working-directory: /home/runner/
       run: |
         mkdir .streamlit
         touch .streamlit/secrets.toml
