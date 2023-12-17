@@ -13,7 +13,7 @@ import seaborn as sns
 st.title('Анализатор комментариев :red[YouTube] :sunglasses:')
 
 # Получаем YouTube API KEY из secrets
-DEVELOPER_KEY = os.getenv('API_KEY_YOUTUBE')
+DEVELOPER_KEY = st.secrets['API_KEY_YOUTUBE']
 if not DEVELOPER_KEY:
     raise RuntimeError('Key is not set. Check your environment variables.')
 

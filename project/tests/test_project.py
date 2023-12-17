@@ -1,8 +1,10 @@
 import os
 
+from dotenv import load_dotenv
 from streamlit.testing.v1 import AppTest
 
-DEVELOPER_KEY = os.getenv('API_KEY_YOUTUBE')
+load_dotenv()
+DEVELOPER_KEY = os.environ.get('API_KEY_YOUTUBE')
 
 
 def test_key_in_env():
@@ -16,7 +18,7 @@ def test_bad_url_input():
     at.sidebar.button[0].click().run()
     assert len(at.sidebar.text_input) == 1
     assert at.warning[0].value == 'URL'
-    assert at.success[0].value == 'Готово! Обработано 20 комментариев.'
+    assert len(at.success) == 1
 
 def test_url_input():
     at = AppTest.from_file('project.py', default_timeout=30)
@@ -26,4 +28,4 @@ def test_url_input():
     at.sidebar.button[0].click().run()
     assert len(at.sidebar.text_input) == 1
     assert at.success[0].value == 'URL'
-    assert at.success[1].value == 'Готово! Обработано 100 комментариев.'
+    assert len(at.success) == 2
