@@ -14,8 +14,10 @@ st.title('Анализатор комментариев :red[YouTube] :sunglasse
 
 # Получаем YouTube API KEY из secrets
 DEVELOPER_KEY = os.getenv('API_KEY_YOUTUBE')
-if not DEVELOPER_KEY:
-    raise RuntimeError('Key is not set. Check your environment variables.')
+
+#if not DEVELOPER_KEY:
+#    raise RuntimeError('Key is not set. Check your environment variables.')
+
 
 # Инициализируем модель Hugging Face для анализа тональности текста
 cls_sent = pipeline("sentiment-analysis",   
