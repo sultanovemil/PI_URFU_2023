@@ -13,7 +13,8 @@
 Цель проекта: разработать Web приложение машинного обучения и развернуть его в облаке. 
 В проекте используется предварительно обученная модель [`blanchefort/rubert-base-cased-sentiment`](https://huggingface.co/blanchefort/rubert-base-cased-sentiment).
 
-### Итоговый проект (PJ) доступен по ссылке: https://huggingface.co/spaces/Emil25/pi_project
+### Итоговый проект (PJ) доступен по ссылке: 
+https://huggingface.co/spaces/Emil25/pi_project
 или https://piurfu2023project.streamlit.app/
 
 
@@ -62,14 +63,17 @@
 ##### Аудио
 https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/d2b44601-238d-4c5b-a176-ba77dde3b440
 
+
+
 ### `a.shibakova_2.py`
 Веб-приложение моделирует переписку и предлагает различные темы для общения. 
-
 
 #### Используемые библиотеки
 * [Streamlit](https://streamlit.io)
 * [streamlit_chat](https://streamlit.io)
 * [Transformers (HuggingFace)](https://huggingface.co)
+
+
 
 ### `e.sultanov_2.py`
 Веб-приложение анализирует и распознает изображения с помощью модели [`apple/mobilevit-small`](https://huggingface.co/apple/mobilevit-small).
@@ -77,6 +81,7 @@ https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/d2b44601-238d-4c5b-
 * [PyTorch](https://pytorch.org)
 * [Transformers (HuggingFace)](https://huggingface.co)
 * [Streamlit](https://streamlit.io)
+
 #### Описание
 Веб-приложение основано на модели "apple/mobilevit-small" и предоставляет возможность распознавания объектов на загруженных изображениях. Чтобы воспользоваться этой функцией, следуйте инструкциям ниже:
 #### Шаг 1: Загрузите изображение
@@ -92,11 +97,15 @@ https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/d2b44601-238d-4c5b-
 * Результаты могут включать список объектов, обнаруженных на изображении.
 * Учтите, что точность распознавания может варьироваться в зависимости от сложности изображения и обученной модели.
 
+
+
 ## Практическое задание №3 (pz3)
 Создание API для модели машинного обучения с помощью библиотеки FastAPI  на Python.
 
+
 ### `sultanov_3`
 API для перевода текста с мультиязычного (mul) на английский язык (en) с помощью модели [`Helsinki-NLP/opus-mt-mul-en`](https://huggingface.co/Helsinki-NLP/opus-mt-mul-en). 
+
 
 ### `pakhomov_3`
 API для определения эмоций в англоязычном тексте с помощью модели [`SamLowe/roberta-base-go_emotions`](https://huggingface.co/SamLowe/roberta-base-go_emotions).
@@ -131,15 +140,22 @@ uvicorn main:app --host localhost
 API для чатбота с помощью модели [`facebook/blenderbot-400M-distill`](https://huggingface.co/facebook/blenderbot-400M-distill?text=Hey+my+name+is+Clara%21+How+are+you%3F). 
 
 
+
 ## Практическое задание №4 (pz4)
 Развертывание Web или API приложения в облаке для доступа пользователей через интернет.
+
+
 ### `sultanov`
 Веб-приложение, которое предсказывает тип цветка Ириса на основе его характеристик. Приложение использует библиотеку машинного обучения scikit-learn для обучения модели классификации и предсказания типа цветка.
 Приложение доступно по ссылке: https://piurfu2023project4.streamlit.app 
 
+
+
+
 ## Практическое задание №5
 Развертывание Web или API приложения в облаке для доступа пользователей через интернет.
 Цель задания: научиться создавать тесты для  API модели машинного обучения и настраивать автоматический запуск тестов на GitHub. 
+
 
 ### `sultanov` https://github.com/sultanovemil/pz5
 Тесты для API модели машинного обучения ['blanchefort/rubert-base-cased-sentiment'](https://huggingface.co/blanchefort/rubert-base-cased-sentiment), которое классифицирует эмоциональную окраску коротких текстов на русском языке.
