@@ -153,8 +153,9 @@ API для чатбота с помощью модели [`facebook/blenderbot-4
 ### `shibakova` 
 Приложение, созданное на основе модели и развернутое в streamlit [`facebook/blenderbot-400M-distill`](https://huggingface.co/facebook/blenderbot-400M-distill?text=Hey+my+name+is+Clara%21+How+are+you%3F). 
 
-['ссылка на репозиторий'](https://github.com/sureshiba/chatbot)
+['ссылка на репозиторий с кодом'](https://github.com/sureshiba/chatbot)
 
+**Ссылка на приложение:** https://chatbotsa.streamlit.app/
 
 ## Практическое задание №5
 Развертывание Web или API приложения в облаке для доступа пользователей через интернет.
