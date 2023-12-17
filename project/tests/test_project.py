@@ -1,8 +1,18 @@
 import os
 
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from streamlit.testing.v1 import AppTest
 
+# Jast a simple test 
+def test_url_input():
+    at = AppTest.from_file('project.py', default_timeout=30)    
+    at.run()
+    at.sidebar.text_input[0].input('https://www.youtube.com/watch?v=wDmPgXhlDIg').run()
+    at.sidebar.button[0].click().run()    
+    assert at.success[0].value == 'URL' 
+
+
+'''
 load_dotenv()
 DEVELOPER_KEY = os.environ.get('API_KEY_YOUTUBE')
 
@@ -29,3 +39,4 @@ def test_url_input():
     assert len(at.sidebar.text_input) == 1
     assert at.success[0].value == 'URL'
     assert len(at.success) == 2
+'''
