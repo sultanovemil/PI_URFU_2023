@@ -152,7 +152,8 @@ API для чатбота с помощью модели [`facebook/blenderbot-4
 
 ### `shibakova` 
 Приложение, созданное на основе модели и развернутое в streamlit [`facebook/blenderbot-400M-distill`](https://huggingface.co/facebook/blenderbot-400M-distill?text=Hey+my+name+is+Clara%21+How+are+you%3F). 
-['ссылка'](https://github.com/sureshiba/chatbot)
+
+['ссылка на репозиторий'](https://github.com/sureshiba/chatbot)
 
 
 ## Практическое задание №5
