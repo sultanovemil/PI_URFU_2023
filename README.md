@@ -132,7 +132,7 @@ https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/d2b44601-238d-4c5b-
 
 ### `m.bolotov_2.py`
 
-Распознавание изображения с помощью модели [`facebook/dinov2-small-imagenet1k-1-layer`]
+Распознавание изображения с помощью модели [`facebook/dinov2-small-imagenet1k-1-layer`](https://huggingface.co/facebook/dinov2-small-imagenet1k-1-layer)
 
 #### Используемые библиотеки
 * [Transformers (HuggingFace)](https://huggingface.co)
