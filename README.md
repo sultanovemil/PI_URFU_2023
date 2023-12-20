@@ -130,6 +130,15 @@ https://github.com/sultanovemil/PI_URFU_2023/assets/32728173/d2b44601-238d-4c5b-
 * Учтите, что точность распознавания может варьироваться в зависимости от сложности изображения и обученной модели.
 </details>
 
+### `m.bolotov_2.py`
+
+Распознавание изображения с помощью модели [`facebook/dinov2-small-imagenet1k-1-layer`]
+
+#### Используемые библиотеки
+* [Transformers (HuggingFace)](https://huggingface.co)
+* [Streamlit](https://streamlit.io)
+* [PIL]
+
 
 ## Практическое задание №3 (pz3)
 Создание API для модели машинного обучения с помощью библиотеки FastAPI  на Python.
